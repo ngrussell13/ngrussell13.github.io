@@ -32,14 +32,12 @@ info.addTo(map);
 ////////////////////////////////////////////////////////////////////////////////
 // get color depending on population density value
 function getColor(d) {
-  return d > 1000 ? '#800026' :
-    d > 70000 ? '#BD0026' :
-    d > 60000 ? '#E31A1C' :
-    d > 50000 ? '#FC4E2A' :
-    d > 40000 ? '#FD8D3C' :
-    d > 20 ? '#FEB24C' :
-    d > 10 ? '#FED976' :
-    '#FFEDA0';
+  return d > 70000 ? '#006837' :
+    d > 60000 ? '#31a354' :
+    d > 50000 ? '#78c679' :
+    d > 40000 ? '#c2e699' :
+    d < 40000 ? '#ffffcc' :
+        '#ffffcc';
 }
 // set color of the json based on its Population Density
 function style(feature) {
@@ -107,7 +105,7 @@ var legend = L.control({
 legend.onAdd = function(map) {
 
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+    grades = [0, 40000, 50000, 60000, 70000],
     labels = [],
     from, to;
 
