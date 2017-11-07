@@ -8,7 +8,7 @@ var map = L.map('map').setView(coords, zoom); // put it all together
 // load a basemap tile layer
 L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
   maxZoom: 18,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
 ////////////////////////////////////////////////////////////////////////////////
