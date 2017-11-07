@@ -23,7 +23,7 @@ info.onAdd = function(map) {
 
 info.update = function(props) {
   this._div.innerHTML = '<h4>Median Household Income</h4>' + (props ?
-    '<b>' + props.name + '</b><br />' + props.income + 'USD' :
+    '<b>' + props.name + '</b><br />' + props.income + ' USD' :
     'Hover over a state');
 };
 
