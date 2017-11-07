@@ -8,7 +8,7 @@ var map = L.map('map').setView(coords, zoom); // put it all together
 // load a basemap tile layer
 L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
   maxZoom: 18,
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Data by <a href="https://cdflint.github.io/">Carl Flint</a>'
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,
 }).addTo(map);
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +23,7 @@ info.onAdd = function(map) {
 
 info.update = function(props) {
   this._div.innerHTML = '<h4>Median Household Income</h4>' + (props ?
-    '<b>' + props.name + '</b><br />' + props.income + ' USD' :
+    '<b>' + props.name + '</b><br />' + props.income + 'USD' :
     'Hover over a state');
 };
 
