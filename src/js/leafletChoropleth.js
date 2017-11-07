@@ -22,8 +22,8 @@ info.onAdd = function(map) {
 };
 
 info.update = function(props) {
-  this._div.innerHTML = '<h4>US Population Density</h4>' + (props ?
-    '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>' :
+  this._div.innerHTML = '<h4>Median Household Income</h4>' + (props ?
+    '<b>' + props.name + '</b><br />' + props.income + ' USD' :
     'Hover over a state');
 };
 
@@ -33,10 +33,10 @@ info.addTo(map);
 // get color depending on population density value
 function getColor(d) {
   return d > 1000 ? '#800026' :
-    d > 500 ? '#BD0026' :
-    d > 200 ? '#E31A1C' :
-    d > 100 ? '#FC4E2A' :
-    d > 50 ? '#FD8D3C' :
+    d > 70000 ? '#BD0026' :
+    d > 60000 ? '#E31A1C' :
+    d > 50000 ? '#FC4E2A' :
+    d > 40000 ? '#FD8D3C' :
     d > 20 ? '#FEB24C' :
     d > 10 ? '#FED976' :
     '#FFEDA0';
@@ -96,7 +96,7 @@ geojson = L.geoJson(statesData, {
 
 ////////////////////////////////////////////////////////////////////////////////
 // customize map attribution in lower left corner
-map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+map.attributionControl.addAttribution('Income data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 ////////////////////////////////////////////////////////////////////////////////
 // add legend layer to map at the given position
